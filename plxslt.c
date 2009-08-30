@@ -1,7 +1,7 @@
 /*
  * PL/XSLT language handler
  *
- * Copyright © 2007 by Peter Eisentraut
+ * Copyright Â© 2007-2009 by Peter Eisentraut
  * See the COPYING file for details.
  *
  */
