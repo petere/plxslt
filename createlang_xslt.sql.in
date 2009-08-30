@@ -1,0 +1,11 @@
+CREATE FUNCTION pg_catalog.plxslt_handler() RETURNS language_handler
+    AS '%filename%'
+    LANGUAGE C;
+
+CREATE FUNCTION pg_catalog.plxslt_validator(oid) RETURNS void
+    AS '%filename%'
+    LANGUAGE C;
+
+CREATE LANGUAGE xslt
+    HANDLER pg_catalog.plxslt_handler
+    VALIDATOR pg_catalog.plxslt_validator;
