@@ -1,5 +1,7 @@
 AUTOMAKE_OPTIONS = foreign
 
+ACLOCAL_AMFLAGS = -I m4
+
 EXTRA_DIST = createlang_xslt.sql.in test.sql
 
 pkglib_LTLIBRARIES = plxslt.la

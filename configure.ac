@@ -1,4 +1,6 @@
-AC_INIT(plxslt, 0.0.0, [peter_e@gmx.net])
+AC_INIT(plxslt, 0.0.1, [peter_e@gmx.net])
+AC_CONFIG_AUX_DIR([build-aux])
+AC_CONFIG_MACRO_DIR([m4])
 AM_INIT_AUTOMAKE(no-define)
 AC_CONFIG_SRCDIR(plxslt.c)
 
