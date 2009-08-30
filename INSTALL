@@ -1,1 +1,31 @@
-tbd
+PL/XSLT Installation Instructions
+=================================
+
+You need to have PostgreSQL 7.4 or later, and you need to have the
+server include files installed.
+
+To build and install PL/XSLT, use this procedure:
+
+./configure --prefix=YOUR_CHOICE
+make
+make install
+
+The include files are found using the pg_config program that is
+included in the PostgreSQL installation.  To use a different
+PostgreSQL installation, point configure to a different pg_config like
+so:
+
+./configure ... PG_CONFIG=/else/where/pg_config
+
+Note that generally server-side modules such as this one have to be
+recompiled for every major PostgreSQL version (that is, 7.4, 8.0,
+...).
+
+To declare the language in a database, use
+
+psql -d DBNAME -f PREFIX/share/plxslt/createlang_xslt.sql
+
+with a server running.  To drop it, use "droplang xslt".
+
+If you checked out the source code from Git, run "autoreconf -i" first
+to set up the build infrastructure.
