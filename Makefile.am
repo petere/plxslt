@@ -7,7 +7,7 @@ EXTRA_DIST = createlang_xslt.sql.in test.sql
 pkglib_LTLIBRARIES = plxslt.la
 plxslt_la_SOURCES = plxslt.c
 
-plxslt_la_CFLAGS = $(Libxml_CFLAGS) $(Libxslt_CLFAGS)
+plxslt_la_CFLAGS = $(Libxml_CFLAGS) $(Libxslt_CFLAGS)
 plxslt_la_LDFLAGS = -module -avoid-version $(Libxslt_LIBS)
 
 pkgdata_SCRIPTS = createlang_xslt.sql
