@@ -31,6 +31,17 @@ Peter Eisentraut <peter@eisentraut.org>
 Installation
 ------------
 
+Build:
+
     make
     make install
+
+Set the environment variable `PG_CONFIG` to the location of the `pg_config` program belonging to the desired PostgreSQL installation, if it is not found automatically.
+
+Load into database:
+
+    CREATE EXTENSION plxslt;
+
+For versions before PostgreSQL 9.1:
+
     psql -f plxslt.sql
