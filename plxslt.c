@@ -94,7 +94,7 @@ type_to_cstring(Datum input, Oid typeoid)
 /*
  * Internal handler function
  */
-Datum
+static Datum
 handler_internal(Oid function_oid, FunctionCallInfo fcinfo, bool execute)
 {
 	HeapTuple	proctuple;
@@ -231,6 +231,7 @@ handler_internal(Oid function_oid, FunctionCallInfo fcinfo, bool execute)
  * The PL handler
  */
 PG_FUNCTION_INFO_V1(plxslt_handler);
+Datum plxslt_handler(PG_FUNCTION_ARGS);
 
 Datum
 plxslt_handler(PG_FUNCTION_ARGS)
@@ -244,6 +245,7 @@ plxslt_handler(PG_FUNCTION_ARGS)
  * Validator function
  */
 PG_FUNCTION_INFO_V1(plxslt_validator);
+Datum plxslt_validator(PG_FUNCTION_ARGS);
 
 Datum
 plxslt_validator(PG_FUNCTION_ARGS)
