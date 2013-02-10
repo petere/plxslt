@@ -45,3 +45,6 @@ AS $$<?xml version="1.0"?>
 
 </xsl:stylesheet>
 $$;
+
+
+SELECT tohtml(query_to_xml($$VALUES (1, 2, 3), (4, 5, 6)$$, false, false, ''));
