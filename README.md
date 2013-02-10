@@ -27,3 +27,10 @@ I'm interested if anyone is using this.
 Peter Eisentraut <peter@eisentraut.org>
 
 [![Build Status](https://secure.travis-ci.org/petere/plxslt.png)](http://travis-ci.org/petere/plxslt)
+
+Installation
+------------
+
+    make
+    make install
+    psql -f plxslt.sql
