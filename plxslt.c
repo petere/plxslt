@@ -1,7 +1,7 @@
 /*
  * PL/XSLT language handler
  *
- * Copyright © 2007-2009 by Peter Eisentraut
+ * Copyright © 2007-2013 by Peter Eisentraut
  * See the COPYING file for details.
  *
  */
@@ -11,6 +11,9 @@
 #include <funcapi.h>
 #include <miscadmin.h>
 #include <access/heapam.h>
+#if defined(PG_VERSION_NUM) && PG_VERSION_NUM >= 90300
+#include <access/htup_details.h>
+#endif
 #include <catalog/pg_proc.h>
 #include <catalog/pg_type.h>
 #include <commands/trigger.h>
