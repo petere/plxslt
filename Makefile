@@ -19,7 +19,7 @@ EXTRA_CLEAN = plxslt--1.sql
 PG_CPPFLAGS += $(shell $(PKG_CONFIG) --cflags-only-I libxml-2.0 libxslt)
 SHLIB_LINK += $(shell $(PKG_CONFIG) --libs libxml-2.0 libxslt)
 
-REGRESS = init tohtml
+REGRESS = init tohtml striptags
 REGRESS_OPTS = --inputdir=test
 
 PGXS := $(shell $(PG_CONFIG) --pgxs)
