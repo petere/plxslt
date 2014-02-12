@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION striptags(xml) RETURNS xml
+CREATE OR REPLACE FUNCTION striptags(xml) RETURNS text
 	LANGUAGE xslt
 AS $$<?xml version="1.0"?>
 <xsl:stylesheet version="1.0"
@@ -6,7 +6,7 @@ AS $$<?xml version="1.0"?>
     xmlns="http://www.w3.org/1999/xhtml"
 >
 
-  <xsl:output format="text" omit-xml-declaration="yes"/>
+  <xsl:output method="text" omit-xml-declaration="yes"/>
 
   <xsl:template match="/">
     <xsl:apply-templates/>
