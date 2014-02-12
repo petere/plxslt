@@ -220,7 +220,7 @@ handler_internal(Oid function_oid, FunctionCallInfo fcinfo, bool execute)
 	xsltCleanupGlobals();
 	xmlCleanupParser();
 
-	resdatum = cstring_to_type((char *) resstr, pg_proc_entry->prorettype);
+	resdatum = cstring_to_type(resstr ? (char *) resstr : "", pg_proc_entry->prorettype);
 	ReleaseSysCache(proctuple);
 	PG_RETURN_DATUM(resdatum);
 }
