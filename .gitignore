@@ -1,0 +1,4 @@
+*.o
+*.so
+plxslt--?.sql
+/results/
