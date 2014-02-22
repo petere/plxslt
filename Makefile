@@ -1,6 +1,10 @@
 PG_CONFIG = pg_config
 PKG_CONFIG = pkg-config
 
+ifneq ($(shell $(PKG_CONFIG) --exists --print-errors libxml-2.0 libxslt && echo yes),yes)
+$(error libxml2 or libxslt is not installed properly)
+endif
+
 pg_version := $(word 2,$(shell $(PG_CONFIG) --version))
 extensions_supported = $(filter-out 6.% 7.% 8.% 9.0%,$(pg_version))
 
